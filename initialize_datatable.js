@@ -2,7 +2,13 @@
 $('#id_datatable').dataTable({
 	      "ajax": {
 	          "url": "url_request",
-	          "dataSrc": ""
+	          "data": {parameter:parameter},
+	          "type": "post",
+	          "dataType": "text",
+	          "dataSrc": function(json){
+
+	          	return json;
+	          }
 	      },
 	
 	      "columns": [
